@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BLACKPINK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="hero is-fullheight is-danger">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 id="title_text" class="title has-text-black">
+                    BL&#923;&#1021;KPI&#886;K
+                </h1>
+            </div>
+        </div>
+    </section>
+    <script>
+        function changeColor() {
+            if (i) {
+                $('section').removeClass("is-danger");
+                $('section').addClass("is-black");
+                $('#title_text').removeClass("has-text-black");
+                $('#title_text').addClass("has-text-danger");
+            } else {
+                $('section').removeClass("is-black");
+                $('section').addClass("is-danger");
+                $('#title_text').removeClass("has-text-danger");
+                $('#title_text').addClass("has-text-black");
+            }
+        }
+
+        var i = true;
+        window.setInterval(function () {
+            changeColor();
+            i = !i;
+        }, 2000);
+    </script>
+</body>
+
+</html>
